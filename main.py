@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from source.conversation_service import ConversationService
 from source.generate_reply_model import GenerateReplyRequestBodyModel, GenerateReplyResponseBodyModel
 
+
 service = ConversationService()
 service.prepare()
 app = FastAPI()

@@ -1,5 +1,5 @@
 """
-`/generate-reply` request body model.
+`/generate-reply` request/response body models.
 """
 
 from pydantic import BaseModel

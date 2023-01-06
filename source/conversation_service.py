@@ -1,4 +1,4 @@
-"""Service answering user questions."""
+"""Service replying to user utterance."""
 
 from transformers import BlenderbotForConditionalGeneration, BlenderbotTokenizer
 
