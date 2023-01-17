@@ -11,8 +11,22 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.app-bar {
+    background: #334d50d7;
+    height: 2.5rem;
+    padding: 0.2rem 0.4rem;
+}
+
+.app-title {
+    margin: 0;
+    padding: 0;
+
+    color: white;
+    font-size: 1.5rem;
+}
+
 .app-container {
-    height: 100%;
+    height: calc(100% - 2.5rem);
 
     display: flex;
     justify-content: center;
@@ -73,7 +87,7 @@ body {
 }
 
 #send-button {
-    background-color: #334d50;
+    background-color: #334d50d7;
     color: white;
 
     border: none;
@@ -108,10 +122,10 @@ body {
 
 @media (max-width: 480px) {
     #chat-box {
-        height: 100vh;
+        height: calc(100% - 2.5rem);
     }
     .chat-container {
-        height: 100vh;
+        height: 100%;
         width: 100%;
     }
 }
