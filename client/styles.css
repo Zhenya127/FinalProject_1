@@ -105,3 +105,13 @@ body {
     background-color: #334d50bb;
     color: white;
 }
+
+@media (max-width: 480px) {
+    #chat-box {
+        height: 100vh;
+    }
+    .chat-container {
+        height: 100vh;
+        width: 100%;
+    }
+}
