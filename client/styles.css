@@ -46,6 +46,11 @@ body {
     flex-grow: 1;
 }
 
+#chat-input::placeholder{
+    color: #334d50;
+    font-weight: 600;
+}
+
 #chat-box {
     height: 30em;
     width: 100%;

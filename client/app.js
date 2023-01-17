@@ -11,6 +11,7 @@ function sendMessage() {
     const userInput = chatInput.value;
     chatInput.value = '';
     if (userInput?.length > 0) {
+        startLoading();
         addMessageToChat(userInput, 'client');
         fetch(currentUrl, {
             method: 'POST',
@@ -24,6 +25,12 @@ function sendMessage() {
                 if (res.reply) {
                     addMessageToChat(res.reply, 'response');
                 }
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+            .finally((res) => {
+                endLoading();
             });
     }
 }
@@ -43,6 +50,18 @@ function addMessageToChat(message, side) {
 
     node.appendChild(textNode);
     chatBox.appendChild(node);
+}
+
+/** Enable loading status and styles */
+function startLoading() {
+    chatInput.placeholder = 'Loading...';
+    chatInput.disabled = true;
+}
+
+/** Disable loading status and styles */
+function endLoading() {
+    chatInput.placeholder = '';
+    chatInput.disabled = false;
 }
 
 // send message on Enter
