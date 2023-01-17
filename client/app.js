@@ -6,8 +6,10 @@ let currentUrl = localUrl;
 const chatBox = document.getElementById('chat-box');
 const chatInput = document.getElementById('chat-input');
 
-function sendMessage() {    
+/** Send request to the server and add response to chat. */
+function sendMessage() {
     const userInput = chatInput.value;
+    chatInput.value = '';
     addMessageToChat(userInput, 'client');
     if (userInput?.length > 0) {
         fetch(currentUrl, {
@@ -26,6 +28,7 @@ function sendMessage() {
     }
 }
 
+/** Append message to the chat box */
 function addMessageToChat(message, side) {
     const node = document.createElement('li');
     const textNode = document.createTextNode(message);
@@ -41,3 +44,11 @@ function addMessageToChat(message, side) {
     node.appendChild(textNode);
     chatBox.appendChild(node);
 }
+
+// send message on Enter
+chatInput.addEventListener('keydown', (event) => {
+    event.stopPropagation();
+    if (event.code === 'Enter') {
+        sendMessage();
+    }
+});
