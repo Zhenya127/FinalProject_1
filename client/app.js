@@ -10,8 +10,8 @@ const chatInput = document.getElementById('chat-input');
 function sendMessage() {
     const userInput = chatInput.value;
     chatInput.value = '';
-    addMessageToChat(userInput, 'client');
     if (userInput?.length > 0) {
+        addMessageToChat(userInput, 'client');
         fetch(currentUrl, {
             method: 'POST',
             headers: {
