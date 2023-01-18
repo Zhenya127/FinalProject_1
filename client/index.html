@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <title>Group 11 | ChatBot</title>
+    </head>
+    <body>
+        <section class="app-bar">
+            <h1 class="app-title">Group 11 | ChatBot</h1>
+        </section>
+        <main class="app-container">
+            <section class="chat-container">
+                <ul id="chat-box"></ul>
+                <div class="controls-container">
+                    <input id="chat-input" type="text" />
+                    <button id="send-button" onclick="sendMessage()">
+                        Send
+                    </button>
+                </div>
+            </section>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
