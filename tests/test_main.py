@@ -10,9 +10,9 @@ def test_root():
 def test_generate_reply():
     passed_text = 'Hello! What is your name?'
     response = client.post('/generate-reply/', json={'utterance': passed_text})
-<<<<<<< HEAD
+
     assert response.status_code == 200
-=======
+
     assert response.status_code == 200
     assert response.json()['reply'] != ''
 
@@ -21,4 +21,4 @@ def test_generate_reply_empty():
     response = client.post('/generate-reply/', json={'utterance': passed_text})
     assert response.status_code == 200
     assert response.json()['reply'] != ''
->>>>>>> add37f79a4f6e448c6540f36cdde0ab0325cf22a
+
