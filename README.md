@@ -4,7 +4,7 @@
 
 Итоговое задание по дисциплине программная инженерия
 
-# ![Иллюстрация к проекту](https://github.com/Zhenya127/FinalProject_1/blob/main/ScreenShot/icon-robots-16_98547(1).png) Чат-бот на английском языке 
+# ![Иллюстрация к проекту](https://github.com/Zhenya127/FinalProject_1/blob/fd237026b9177e0b5e8aeeb4af4f473b7f2707be/ScreenShot/icon-robots-16_98547(1).png) Чат-бот на английском языке 
 
 ## Содержание
 
